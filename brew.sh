@@ -1,4 +1,4 @@
-
+#!/bin/bash
 # sudo -v
 # while true; do sudo -n true;sleep 60; kill -0 "$$" 
 
@@ -12,10 +12,15 @@ brew install --cask brave-browser
 brew install --cask visual-studio-code
 brew install --cask sublime-text
 brew install --cask mark-text
+brew install --cask docker
 brew install docker
 brew install mysql
 brew install --cask adobe-acrobat-pro
 brew install --cask cryptomator
+brew install --cask iterm2
+brew install --cask postman
+brew install romkatv/powerlevel10k/powerlevel10k
+echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 
 ## Productivity Apps
 brew install --cask maccy
@@ -36,7 +41,6 @@ brew install poetry
 
 ## Other
 brew install node
-
 brew install --cask microsoft-teams
 
 
