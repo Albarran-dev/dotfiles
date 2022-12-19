@@ -1,7 +1,7 @@
 #!/bin/bash
-# sudo -v
-# while true; do sudo -n true;sleep 60; kill -0 "$$" 
 
+# Install Brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # Homebrew Casks
 
 brew update
@@ -12,6 +12,8 @@ brew install git
 brew install --cask iterm2
 brew install jq
 brew install ncdu
+brew install htop
+brew install tldr
 # Oh-my-zsh
 # sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k

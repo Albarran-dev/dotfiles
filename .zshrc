@@ -79,7 +79,8 @@ plugins=(
     git 
     zsh-autosuggestions
     web-search
-    copybuffer dirhistory)
+    copybuffer 
+    dirhistory)
 
 source $ZSH/oh-my-zsh.sh
 
