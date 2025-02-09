@@ -14,7 +14,7 @@ defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 
 # Keyboard: Faster key repeat
-defaults write -g KeyRepeat -int 1
+defaults write -g KeyRepeat -int 2
 defaults write -g InitialKeyRepeat -int 10
 
 # Teclado: ingles estadounidense internacional
