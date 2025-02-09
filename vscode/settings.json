@@ -1,0 +1,18 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "terminal.integrated.fontFamily": "MesloLGM Nerd Font",
+    "workbench.sideBar.location": "right",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "editor.rulers": [
+        {"column": 100}
+    ],
+    "editor.minimap.enabled": false,
+    "ruff.format.args": [
+        "--config=pyproject.toml"
+    ],
+    "jupyter.askForKernelRestart": false,
+    "editor.cursorStyle": "line-thin",
+    "better-comments.multilineComments": true,
+    "explorer.confirmPasteNative": false,
+    "explorer.confirmDragAndDrop": false
