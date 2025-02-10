@@ -15,5 +15,22 @@
     "editor.cursorStyle": "line-thin",
     "better-comments.multilineComments": true,
     "explorer.confirmPasteNative": false,
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "accessibility.signals.terminalBell": {
+        "announcement": "off",
+        "sound": "off"
+    },
+    "accessibility.signals.terminalQuickFix": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.terminalCommandSucceeded": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.terminalCommandFailed": {
+        "sound": "off",
+        "announcement": "off"
+    }
+
 }
