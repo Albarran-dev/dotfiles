@@ -36,6 +36,11 @@ brew install ngrok
 brwe install xh
 brew install node
 brew install lazygit
+brew install nvim
+brew install tmux
+
+# Optional
+# brew install poppler # package pdf2image needs it on mac
 
 # Install Aerospace
 brew install --cask nikitabobko/tap/aerospace
