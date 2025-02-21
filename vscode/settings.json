@@ -31,6 +31,6 @@
     "accessibility.signals.terminalCommandFailed": {
         "sound": "off",
         "announcement": "off"
-    }
-
+    },
+    "editor.accessibilitySupport": "off",
 }
