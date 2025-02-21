@@ -24,14 +24,23 @@ brew install fcp
 brew install fd
 brew install timewarrior
 brew install awscli
+brew install azure-cli
 brew install just
 brew install magic-wormhole
 brew install pre-commit
-brew install azure-cli
 brew install gitleaks
 brew install csvlens
 brew install tokei
+brew install pueue
+brew install ngrok
+brwe install xh
+brew install node
+brew install lazygit
 
+# Install Aerospace
+brew install --cask nikitabobko/tap/aerospace
+brew tap FelixKratz/formulae
+brew install borders
 
 # Install GUI apps (via Homebrew Cask)
 echo "🖥 Installing Mac apps..."
@@ -51,8 +60,13 @@ brew install --cask betterdisplay
 brew install --cask keka
 brew install --cask karabiner-elements
 brew install --cask postman
+brew install --cask mark-text
+xattr -cr /Applications/MarkText.app # Needed for marktext to work, since its not signed for apple
+
 
 # Other
+oh-my-posh font install meslo
+
 
 # Set up dotfiles with Stow
 echo "🔗 Stowing dotfiles..."
