@@ -1,19 +1,14 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
+# Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
-
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-source $(dirname $(gem which colorls))/tab_complete.sh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
+# load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="powerlevel10k"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -75,7 +70,8 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions web-search copybuffer dirhistory)
+export FUNCNEST=300 # Default is 50, is to avoid error: _zsh_autosuggest_widget_modify:1: maximum nested function level reached; increase FUNCNEST?
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf-tab)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -90,20 +86,47 @@ source $ZSH/oh-my-zsh.sh
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# export ARCHFLAGS="-arch $(uname -m)"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-alias lc='colorls -a'
+# Set personal aliases, overriding those provided by Oh My Zsh libs,
+# plugins, and themes. Aliases can be placed here, though Oh My Zsh
+# users are encouraged to define aliases within a top-level file in
+# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
+# - $ZSH_CUSTOM/aliases.zsh
+# - $ZSH_CUSTOM/macos.zsh
+
+alias ls="eza --color=always --git --icons=always"
+alias tree="eza --tree --color=always --icons=always"
+alias fzf="fzf --preview="bat --color=always {}""
+
+alias gst="git status -s"
+alias gstt="git status"
+alias gf="git fetch"
+alias gcm="git commit -m"
+alias gcma="git commit --amend --no-edit"
+alias gp="git push"
+alias gpl="git pull"
+alias gs="git switch"
+alias gsc="git switch -c"
+alias gpa="git add --patch"
+alias gsla="git --no-pager log --oneline --decorate --all --graph -35"
+
+alias last_download="eza -r -snew | head -n1"
+
+
+# For a full list of active aliases, run alias.
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(oh-my-posh init zsh --config $HOME/.alvaro_theme.omp.json)"
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+eval "$(zoxide init --cmd cd zsh)"
+eval $(thefuck --alias)
+autoload -Uz compinit && compinit
