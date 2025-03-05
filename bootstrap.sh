@@ -2,7 +2,6 @@
 
 echo "🔧 Setting up your Mac with Homebrew and dotfiles..."
 
-
 # Update and upgrade brew
 brew update
 brew upgrade
@@ -12,7 +11,7 @@ echo "📦 Installing CLI tools..."
 brew install git
 brew install uv
 brew install jandedobbeleer/oh-my-posh/oh-my-posh
-brew install eza 
+brew install eza
 brew install bat
 brew install tlrc
 brew install thefuck
@@ -33,11 +32,12 @@ brew install csvlens
 brew install tokei
 brew install pueue
 brew install ngrok
-brwe install xh
+brew install xh
 brew install node
 brew install lazygit
 brew install nvim
 brew install tmux
+brew install yazi
 
 # Optional
 # brew install poppler # package pdf2image needs it on mac
@@ -68,10 +68,8 @@ brew install --cask postman
 brew install --cask mark-text
 xattr -cr /Applications/MarkText.app # Needed for marktext to work, since its not signed for apple
 
-
 # Other
 oh-my-posh font install meslo
-
 
 # Set up dotfiles with Stow
 echo "🔗 Stowing dotfiles..."
