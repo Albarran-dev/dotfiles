@@ -8,9 +8,8 @@
         {"column": 100}
     ],
     "editor.minimap.enabled": false,
-    "ruff.format.args": [
-        "--config=pyproject.toml"
-    ],
+    "ruff.configuration": 
+        "pyproject.toml",
     "jupyter.askForKernelRestart": false,
     "editor.cursorStyle": "line-thin",
     "better-comments.multilineComments": true,
@@ -18,4 +17,9 @@
     "explorer.confirmDragAndDrop": false,
     "editor.accessibilitySupport": "off",
     "explorer.confirmDelete": false,
+    "files.associations": {
+        "justfile": "shellscript"
+    },
+    "camouflage.enabled": false,
+    "git.ignoreRebaseWarning": true,
 }
