@@ -65,6 +65,7 @@ brew install --cask betterdisplay
 brew install --cask keka
 brew install --cask karabiner-elements
 brew install --cask postman
+brew install --cask kap
 brew install --cask mark-text
 xattr -cr /Applications/MarkText.app # Needed for marktext to work, since its not signed for apple
 
